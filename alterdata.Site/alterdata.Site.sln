@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alterdata.Site.Domain", "al
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alterdata.Site.Repository", "alterdata.site.Repository\alterdata.Site.Repository.csproj", "{776029C7-EC70-4ABE-B928-39103CFB6208}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alterdata.Site.Controller", "alterdata.Site.Controller\alterdata.Site.Controller.csproj", "{5E71E718-532A-4543-A0B6-C50AFAC923E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{776029C7-EC70-4ABE-B928-39103CFB6208}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{776029C7-EC70-4ABE-B928-39103CFB6208}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{776029C7-EC70-4ABE-B928-39103CFB6208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E71E718-532A-4543-A0B6-C50AFAC923E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E71E718-532A-4543-A0B6-C50AFAC923E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E71E718-532A-4543-A0B6-C50AFAC923E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E71E718-532A-4543-A0B6-C50AFAC923E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
