@@ -11,17 +11,53 @@ namespace alterdata.Site.Controller
 {
     public class ConexaoPostgres
     {
-        public DataTable ConectarBasePostGres(string comandoSql)
+        private string _stringConnection = @"User ID=root;Password=myPassword;Host=localhost;Port=5432;Database=myDataBase;Pooling=true;Min Pool Size=0;Max Pool Size=100;Connection Lifetime=0";
+        private NpgsqlConnection _conexao = null;
+
+        private bool conectar()
         {
-            var stringConnection = "User ID=root;Password=myPassword;Host=localhost;Port=5432;Database=myDataBase;Pooling=true;Min Pool Size=0;Max Pool Size=100;Connection Lifetime=0";
-            
-            using (var conexao = new NpgsqlConnection(stringConnection))
+            _conexao = new NpgsqlConnection(_stringConnection);
+            try
+            {
+                if(ConnectionState.Closed == _conexao.State)
+                    _conexao.Open();
+                    
+                return true;
+            }
+            catch
+            {
+                _conexao.Close();
+                return false;
+            }
+        }
+        private bool desconectar()
+        {
+            try
+            {
+                if (_conexao.State != ConnectionState.Closed)
+                {
+                    _conexao.Close();
+                    _conexao.Dispose();
+                }
+                return true;
+            }
+            catch
+            {
+                _conexao.Dispose();
+                return false;
+            }
+        }
+
+        public DataTable Pesquisa(string comandoSql)
+        {
+                       
+            using ()
             {
                 try
                 {
-                    if (conexao.State == ConnectionState.Closed)
+                    if (_conexao.State == ConnectionState.Closed)
                     {
-                        conexao.Open();
+                        _conexao.Open();
                     }
 
                     var sqlCommand = new NpgsqlCommand(comandoSql);
