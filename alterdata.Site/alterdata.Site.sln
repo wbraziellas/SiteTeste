@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alterdata.Site.Domain", "alterdata.Site.Domain\alterdata.Site.Domain.csproj", "{133BC7C4-AC2D-4808-912F-6A3721DBB58B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alterdata.Site.Repository", "alterdata.site.Repository\alterdata.Site.Repository.csproj", "{776029C7-EC70-4ABE-B928-39103CFB6208}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alterdata.Site.DTO", "alterdata.site.Repository\alterdata.Site.DTO.csproj", "{776029C7-EC70-4ABE-B928-39103CFB6208}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alterdata.Site.Controller", "alterdata.Site.Controller\alterdata.Site.Controller.csproj", "{5E71E718-532A-4543-A0B6-C50AFAC923E5}"
 EndProject

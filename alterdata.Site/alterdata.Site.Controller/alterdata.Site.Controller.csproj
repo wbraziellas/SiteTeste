@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConexaoPostgres.cs" />
     <Compile Include="ConverterDados.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,9 +51,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\alterdata.site.Repository\alterdata.Site.Repository.csproj">
+    <ProjectReference Include="..\alterdata.site.Repository\alterdata.Site.DTO.csproj">
       <Project>{776029c7-ec70-4abe-b928-39103cfb6208}</Project>
-      <Name>alterdata.Site.Repository</Name>
+      <Name>alterdata.Site.DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
