@@ -44,13 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConverterDados.cs" />
+    <Compile Include="ObterDadosCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\alterdata.Site.Domain\alterdata.Site.Domain.csproj">
+      <Project>{133bc7c4-ac2d-4808-912f-6a3721dbb58b}</Project>
+      <Name>alterdata.Site.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\alterdata.site.Repository\alterdata.Site.DTO.csproj">
       <Project>{776029c7-ec70-4abe-b928-39103cfb6208}</Project>
       <Name>alterdata.Site.DTO</Name>

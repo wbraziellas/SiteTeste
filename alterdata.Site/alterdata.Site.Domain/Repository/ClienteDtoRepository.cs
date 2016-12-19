@@ -9,14 +9,14 @@ using alterdata.Site;
 
 namespace alterdata.Site.Domain
 {
-    public class ConexaoPostgres
+    public class ClienteDtoRepository
     {
         private string _stringConnection = @"User ID=root;Password=myPassword;Host=localhost;Port=5432;Database=myDataBase;Pooling=true;Min Pool Size=0;Max Pool Size=100;Connection Lifetime=0";
         private NpgsqlConnection _conexao = null;
         private string _sqlCommand = string.Empty;
                
 
-        public bool inserirClienteS(ClienteDTO cliente)
+        public bool inserirCliente(ClienteDTO cliente)
         {
             _sqlCommand = @"INSERT INTO CLIENTES("+
                 "   ID,"+
@@ -108,14 +108,15 @@ namespace alterdata.Site.Domain
     
         public IEnumerable<ClienteDTO> Pesquisa(string nome)
         {
-            _sqlCommand = @"select * from clientes where nome like /    ";
-
-
+            _sqlCommand = "select * from clientes where nome like \"%@NOME%\"";
+            
             try
             {
                 conectar();
 
-                var sql = new NpgsqlCommand(_sqlCommand, _conexao);                
+                var sql = new NpgsqlCommand(_sqlCommand, _conexao);
+                sql.Parameters.Add(new NpgsqlParameter("@NOME", nome));
+                              
                 var adapter = new NpgsqlDataAdapter() { SelectCommand = sql };
                 var data = new DataTable();
 
